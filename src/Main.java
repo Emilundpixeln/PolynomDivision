@@ -39,7 +39,7 @@ public class Main {
         else
             return "x^" + Integer.toString(power);
     }
-    
+
     public static void main(String[] args) {
 
 
