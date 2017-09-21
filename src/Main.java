@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-//hello
 public class Main {
     private static void printPoly(float[] poly) {
         // prints a polynomial: 2x^3 +x^2 -x -4
@@ -14,7 +13,10 @@ public class Main {
             if (poly[i] != 0) {
                 nonZeroEncountered = true;
                 if (poly[i] == 1)
-                    System.out.print(spacer + printPower(poly.length - 1 - i));
+                    if (poly.length - 1 - i == 0)
+                        System.out.print(spacer + "1");
+                    else
+                        System.out.print(spacer + printPower(poly.length - 1 - i));
                 else if (poly[i] == -1) {
                     if (poly.length - 1 - i == 0)
                         System.out.print(" -1");
@@ -105,7 +107,7 @@ public class Main {
         printPoly(numCopy);
         System.out.print(") : (");
         printPoly(div);
-        System.out.print(") =3");
+        System.out.print(") =");
         printPoly(res);
         if (rest) {
             System.out.print("  Rest:");
